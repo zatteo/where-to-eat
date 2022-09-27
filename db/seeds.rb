@@ -29,3 +29,16 @@ Restaurant.create([{
     latitude: -70.412,
   }
 ])
+
+Reservation.create([{
+    name: "John",
+    people: 2,
+    date: "2022-09-27 12:00:00",
+    restaurant: Restaurant.first,
+  }, {
+    name: "James",
+    people: 4,
+    date: "2022-09-28 13:00:00",
+    restaurant: Restaurant.second,
+  }
+])

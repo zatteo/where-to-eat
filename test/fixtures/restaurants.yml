@@ -1,20 +1,20 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+les_delices_du_liban:
     name: "Les délices du Liban"
     cooking_type: "lebanese"
     price: 10
     city: "Bordeaux"
     longitude: 40.714
     latitude: -74.006
-two:
+bistrot:
     name: "Bistrot"
     cooking_type: "french"
     price: 20
     city: "Bordeaux"
     longitude: 41.125
     latitude: -72.152
-three:
+emperor_sushi:
     name: "Emperor Sushi"
     cooking_type: "sushi"
     price: 10
