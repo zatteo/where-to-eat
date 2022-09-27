@@ -2,7 +2,7 @@
 
 one:
   name: MyString
-  type: 
+  cooking_type: 
   price: 1
   city: MyString
   longitude: 1.5
@@ -10,7 +10,7 @@ one:
 
 two:
   name: MyString
-  type: 
+  cooking_type: 
   price: 1
   city: MyString
   longitude: 1.5
