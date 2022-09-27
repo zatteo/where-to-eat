@@ -4,10 +4,14 @@ john:
   name: John
   people: 2
   date: 2022-09-27 12:00:00
+  token: 'abcd'
+  email: 'john@example.com'
   restaurant: les_delices_du_liban
 
 james:
   name: James
   people: 4
   date: 2022-09-28 13:00:00
+  token: 'efgh'
+  email: 'james@example.com'
   restaurant: le_bistrot

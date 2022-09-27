@@ -3,6 +3,8 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
 
+    @reservation.token = SecureRandom.base58(32)
+
     if @reservation.save
       render json: @reservation, status: :created, location: @reservation
     else
@@ -14,6 +16,6 @@ class ReservationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reservation_params
-      params.require(:reservation).permit(:name, :people, :date, :restaurant_id)
+      params.require(:reservation).permit(:name, :people, :date, :email, :restaurant_id)
     end
 end

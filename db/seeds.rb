@@ -30,15 +30,23 @@ Restaurant.create([{
   }
 ])
 
+Reservation.skip_callbacks = true
+
 Reservation.create([{
     name: "John",
     people: 2,
     date: "2022-09-27 12:00:00",
+    token: 'abcd',
+    email: "john@example.com",
     restaurant: Restaurant.first,
   }, {
     name: "James",
     people: 4,
     date: "2022-09-28 13:00:00",
+    token: 'efgh',
+    email: "james@example.com",
     restaurant: Restaurant.second,
   }
 ])
+
+Reservation.skip_callbacks = false
