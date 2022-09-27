@@ -6,9 +6,20 @@ class ReservationsController < ApplicationController
     @reservation.token = SecureRandom.base58(32)
 
     if @reservation.save
-      render json: @reservation, status: :created, location: @reservation
+      render json: @reservation, status: :created
     else
       render json: @reservation.errors, status: :unprocessable_entity
+    end
+  end
+
+  def cancel
+    reservation = Reservation.find_by(token: params[:token])
+
+    if reservation
+      reservation.destroy
+      render json: { message: 'Votre réservation a bien été annulée'}
+    else
+      render json: { message: 'Votre réservation n\'a pas été annulée'}
     end
   end
 

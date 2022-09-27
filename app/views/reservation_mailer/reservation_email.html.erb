@@ -6,6 +6,9 @@
   <body>
     <h1>Votre réservation est confirmée</h1>
     <p>
+      <%= @reservation.people %> personne(s) à <%= @reservation.restaurant.name %> le <%= @reservation.date %>
+    <p>
+    <p>
       Un problème ? <a href='<%= @cancel_url %>'>Annuler la réservation</a>
     </p>
   </body>
