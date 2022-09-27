@@ -3,7 +3,11 @@ class RestaurantsController < ApplicationController
 
   # GET /restaurants
   def index
-    @restaurants = Restaurant.all
+    if restaurant_params[:city]
+      @restaurants = Restaurant.where(city: restaurant_params[:city])
+    else
+      @restaurants = Restaurant.all
+    end
 
     render json: @restaurants
   end
@@ -45,7 +49,7 @@ class RestaurantsController < ApplicationController
     # end
 
     # Only allow a list of trusted parameters through.
-    # def restaurant_params
-    #   params.require(:restaurant).permit(:name, :type, :price, :city, :longitude, :latitude)
-    # end
+    def restaurant_params
+      params.permit(:city)
+    end
 end
