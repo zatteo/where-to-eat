@@ -103,5 +103,7 @@ Reservations are saved in a postgres DB on Heroku.
 
 If you entered a good email, you should receive an email with a summary of the reservation and a cancellation link. Sometimes there are issues sending the email. Just try again. It's connected to one of my OVH mail account which is not built for this.
 
+When a reservation is cancelled, it's just destroyed.
+
 
 Bon appétit :)
