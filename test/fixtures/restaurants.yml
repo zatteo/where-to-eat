@@ -7,8 +7,8 @@ les_delices_du_liban:
     city: "Bordeaux"
     longitude: 40.714
     latitude: -74.006
-bistrot:
-    name: "Bistrot"
+le_bistrot:
+    name: "Le Bistrot"
     cooking_type: "french"
     price: 20
     city: "Bordeaux"
